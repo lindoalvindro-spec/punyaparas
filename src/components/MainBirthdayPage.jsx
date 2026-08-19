@@ -166,24 +166,6 @@ function LetterTypewriter() {
             )}
           </div>
         ))}
-
-        {/* Show signature after typewriter finishes */}
-        {!isTyping && displayedLines.length > 0 && (
-          <div
-            style={{
-              marginTop: '20px',
-              textAlign: 'right',
-              fontWeight: '600',
-              color: '#38bdf8',
-              fontSize: '0.95rem',
-              opacity: 0,
-              animation: 'fadeInUp 0.8s forwards 0.3s',
-            }}
-          >
-            <span style={{ color: '#60a5fa', fontSize: '0.85rem' }}>With all my love,</span><br />
-            <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: '#38bdf8', textShadow: '0 0 10px rgba(56,189,248,0.5)' }}>Haikal</span>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -512,34 +494,34 @@ export default function MainBirthdayPage() {
   const [activeFlower, setActiveFlower] = useState('sakura');
   const flowerCompliments = {
     rose: {
-      name: "Rose",
+      name: "Mawar",
       icon: "🌹",
       color: "#ff69b4",
-      text: "Rose — Elegant, timeless, and unforgettable. You hold an exceptionally special place in my heart."
+      text: "Mawar — Anggun, abadi, dan tak tergantikan. Kamu selalu memiliki tempat yang sangat istimewa di hatiku."
     },
     tulip: {
       name: "Tulip",
       icon: "🌷",
       color: "#ff85c8",
-      text: "Tulip — Pure and graceful. I appreciate your sincerity and all the quiet, wonderful ways you bring joy to those around you."
+      text: "Tulip — Tulus dan penuh kelembutan. Aku selalu mengagumi ketulusanmu dan caramu membawa kebahagiaan untuk orang-orang di sekitarmu."
     },
     sakura: {
-      name: "Cherry Blossom",
+      name: "Sakura",
       icon: "🌸",
       color: "#ff9ed8",
-      text: "Cherry Blossom — Gentle and radiant. May each step of your journey bring you boundless peace, joy, and wondrous moments."
+      text: "Sakura — Indah, lembut, dan menenangkan. Semoga setiap langkah perjalananmu selalu dipenuhi kedamaian, sukacita, dan momen-momen indah."
     },
     sunflower: {
-      name: "Sunflower",
+      name: "Matahari",
       icon: "🌻",
       color: "#ffb3e0",
-      text: "Sunflower — Bright and uplifting. Thank you for always being a beacon of warmth, positivity, and comfort."
+      text: "Bunga Matahari — Cerah dan penuh semangat. Terima kasih sudah selalu menjadi sumber kehangatan, keceriaan, dan energi positif."
     },
     daisy: {
       name: "Daisy",
       icon: "🌼",
       color: "#ffc0eb",
-      text: "Daisy — Fresh, genuine, and delightful. May life always bless you with endless reasons to smile, even on the quietest days."
+      text: "Daisy — Manis, ceria, dan tulus. Semoga semesta senantiasa memberimu alasan untuk tersenyum manis setiap harinya."
     }
   };
 
@@ -1037,13 +1019,13 @@ export default function MainBirthdayPage() {
         }}
       >
         <p style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#ff69b4', fontWeight: '600', marginBottom: '4px' }}>
-          — A SPECIAL BOUQUET —
+          — BUKET SPESIAL UNTUKMU —
         </p>
         <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', marginBottom: '4px' }}>
-          A Digital Bouquet
+          Buket Bunga Digital 💐
         </h3>
         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
-          A heartfelt gift created just for you 🤍
+          Sentuh bunganya untuk melihat pesan manis khusus untukmu 🤍
         </p>
 
         {/* Bouquet PNG Banner */}
