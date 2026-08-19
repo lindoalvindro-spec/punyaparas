@@ -230,7 +230,7 @@ export default function FlowerLoadingScreen({ onComplete }) {
             letterSpacing: '0.5px',
           }}
         >
-          Just a moment...
+          Tunggu sebentar ya...
         </p>
         <p
           style={{
@@ -241,7 +241,7 @@ export default function FlowerLoadingScreen({ onComplete }) {
             fontStyle: 'italic',
           }}
         >
-          The flowers are blooming for you 🌷
+          Bunga-bunga sedang bermekaran untukmu 🌷
         </p>
 
         {/* Progress bar container */}

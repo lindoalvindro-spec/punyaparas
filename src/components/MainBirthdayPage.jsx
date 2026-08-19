@@ -119,10 +119,10 @@ function LetterTypewriter() {
       {/* Section Header */}
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <p style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#38bdf8', fontWeight: '600', marginBottom: '4px' }}>
-          — FROM MY HEART —
+          — DARI LUBUK HATIKU —
         </p>
         <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.55rem', marginBottom: '4px' }}>
-          A Letter For You
+          Surat Untukmu 💌
         </h3>
         <div
           style={{
@@ -139,7 +139,7 @@ function LetterTypewriter() {
           }}
         >
           <span>💙</span>
-          <span>A Special Note</span>
+          <span>Untaian Kata Tulus</span>
           <span>💙</span>
         </div>
       </div>
@@ -248,7 +248,7 @@ function FarewellSection({ onOpenCake }) {
           letterSpacing: '0.5px',
         }}
       >
-        💙 With all my heart 💙
+        💙 Dari Lubuk Hati Terdalam 💙
       </p>
 
       {/* Main Title — elegant serif with italic accent */}
@@ -264,7 +264,7 @@ function FarewellSection({ onOpenCake }) {
           fontWeight: '600',
         }}
       >
-        May your life<br />
+        Semoga hidupmu<br />
         <span
           style={{
             fontStyle: 'italic',
@@ -272,10 +272,10 @@ function FarewellSection({ onOpenCake }) {
             textShadow: '0 0 20px rgba(56, 189, 248, 0.6), 0 0 40px rgba(0, 210, 255, 0.4)',
           }}
         >
-          always be filled
+          selalu dipenuhi
         </span>
         <br />
-        with flowers
+        bunga-bunga indah
       </h2>
 
       {/* Birthday Message Paragraph */}
@@ -290,8 +290,8 @@ function FarewellSection({ onOpenCake }) {
           fontWeight: '400',
         }}
       >
-        Happy Birthday, Paras Rahmania ❤️<br /><br />
-        May your 19th year ahead be filled with genuine happiness, good health, and success in everything you do. I’m truly grateful to be able to celebrate you today, even though we’re miles apart. Distance may keep us from celebrating side by side, but it could never make this day feel any less special to me
+        Selamat Ulang Tahun, Paras Rahmania ❤️<br /><br />
+        Semoga di usiamu yang ke-19 ini dan tahun-tahun berikutnya selalu dipenuhi kebahagiaan tulus, kesehatan yang baik, dan kelancaran dalam segala hal. Aku sangat bersyukur bisa ikut merayakan hari spesialmu hari ini, meskipun kita terhalang jarak. Jarak mungkin memisahkan kita untuk merayakannya secara langsung, tapi tidak akan pernah mengurangi betapa berartinya hari ini untukku.
       </p>
 
       {/* Center Flower Bucket PNG Ornament */}
@@ -326,7 +326,7 @@ function FarewellSection({ onOpenCake }) {
           marginBottom: '28px',
         }}
       >
-        — With endless love & affection 💙 —
+        — Dengan segenap kasih dan sayang 💙 —
       </p>
 
       {/* Happy Birthday Wish Button */}
@@ -357,7 +357,7 @@ function FarewellSection({ onOpenCake }) {
           e.currentTarget.style.boxShadow = '0 0 25px var(--neon-pink), 0 0 50px rgba(0, 210, 255, 0.3)';
         }}
       >
-        <Sparkles size={18} /> Birthday Wishes & Toast 💕
+        <Sparkles size={18} /> Doa & Harapan Ulang Tahun 💕
       </button>
     </div>
   );
@@ -399,11 +399,11 @@ function PersonalMessageCard() {
       />
 
       <p style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#38bdf8', fontWeight: '600', marginBottom: '6px' }}>
-        — A PERSONAL NOTE —
+        — CATATAN SPESIAL —
       </p>
       
       <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem', color: '#ffffff', marginBottom: '16px' }}>
-        A Heartfelt Note For You 🤍
+        Ungkapan Tulus Untukmu 🤍
       </h3>
 
       <div
@@ -426,7 +426,7 @@ function PersonalMessageCard() {
             fontFamily: 'var(--font-body)',
           }}
         >
-          "I truly cherish your presence and all the thoughtful warmth you bring into my world. Your kindness, intelligence, grace, and courage have such a wonderful way of inspiring me every day. I hope my presence brings as much comfort, happiness, and warmth to your life as yours brings to mine"
+          "Aku sangat bersyukur atas kehadiranmu dan segala kehangatan yang kamu bawa ke dalam hidupku. Kebaikanmu, ketulusanmu, dan senyumanmu selalu berhasil menghadirkan kebahagiaan setiap hari. Semoga kehadiranku pun bisa memberikan rasa nyaman, bahagia, dan ketenangan yang sama untukmu."
         </p>
       </div>
     </div>
@@ -438,12 +438,11 @@ export default function MainBirthdayPage() {
   const heroRef = useRef(null);
   const happyRef = useRef(null);
   const birthdayRef = useRef(null);
-  const agaaRef = useRef(null);
   const eyebrowRef = useRef(null);
   const dateRef = useRef(null);
   
   // Typewriter effect state
-  const fullRomanticText = "Take your time and scroll down gently, I've prepared a little something special for you 🤍";
+  const fullRomanticText = "Pelan-pelan yaa scroll ke bawahnya, ada sesuatu yang spesial buat kamu 🤍";
   const [typedText, setTypedText] = useState('');
   const [isTypingDone, setIsTypingDone] = useState(false);
 
@@ -531,8 +530,8 @@ export default function MainBirthdayPage() {
     { 
       id: 1, 
       title: 'Paras Rahmania ✨', 
-      date: 'Happy 19th Birthday 🤍', 
-      location: 'Cherished Moment',
+      date: 'Selamat Ulang Tahun ke-19 🤍', 
+      location: 'Momen Berharga',
       img: '/paras 1.jpeg',
       rotation: '0deg'
     },
@@ -542,10 +541,10 @@ export default function MainBirthdayPage() {
   const jarRef = useRef(null);
   const [selectedNote, setSelectedNote] = useState(null);
   const jarNotes = [
-    "Every conversation with you leaves a lasting warmth that brightens my entire day. Thank you for being such an amazing person. 💙",
-    "I admire your intelligence, your gentle strength, and the grace with which you carry yourself. 🤍",
-    "You make the world feel softer, kinder, and so much more beautiful just by being in it. ✨",
-    "Thank you for being someone truly unforgettable. Wishing you all the love and happiness in the world. 🌸"
+    "Setiap kali ngobrol sama kamu selalu bikin hari-hariku jadi jauh lebih hangat dan menyenangkan. Terima kasih ya sudah menjadi orang yang luar biasa. 💙",
+    "Aku selalu mengagumi kebaikan hatimu, kelembutan tutur katamu, dan caramu yang selalu tulus dalam setiap hal. 🤍",
+    "Dunia rasanya jadi jauh lebih indah, tenang, dan berwarna hanya dengan kehadiran kamu di dalamnya. ✨",
+    "Terima kasih sudah menjadi sosok yang begitu istimewa dan tak terlupakan. Semoga kamu selalu dipeluk kebahagiaan dan cinta yang melimpah. 🌸"
   ];
 
   // 5. Final Birthday Cake Modal State
@@ -567,11 +566,6 @@ export default function MainBirthdayPage() {
     .fromTo(birthdayRef.current,
       { opacity: 0, scale: 0.85, filter: 'blur(10px)' },
       { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 1, ease: 'back.out(1.5)' },
-      '-=0.6'
-    )
-    .fromTo(agaaRef.current,
-      { opacity: 0, y: 35, filter: 'blur(8px)' },
-      { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9 },
       '-=0.6'
     )
     .fromTo(dateRef.current,
@@ -881,11 +875,11 @@ export default function MainBirthdayPage() {
           }}
         >
           <span>🤍</span>
-          <span style={{ fontFamily: 'var(--font-body)', fontWeight: '500' }}>To someone truly exceptional who turns 19 today.</span>
+          <span style={{ fontFamily: 'var(--font-body)', fontWeight: '500' }}>Untuk seseorang yang sangat istimewa di hari ulang tahunnya yang ke-19</span>
           <span>🤍</span>
         </div>
 
-        {/* Title: Happy 19th Birthday, Paras Rahmania */}
+        {/* Title: Selamat Ulang Tahun ke-19, Paras Rahmania */}
         <div
           style={{
             fontFamily: 'var(--font-display)',
@@ -898,14 +892,14 @@ export default function MainBirthdayPage() {
           <div
             ref={happyRef}
             style={{
-              fontSize: '2.6rem',
+              fontSize: '2.3rem',
               fontWeight: '600',
               color: '#ffffff',
               letterSpacing: '0.5px',
               textShadow: '0 0 20px rgba(255, 255, 255, 0.6)',
             }}
           >
-            Happy 19th Birthday,
+            Selamat Ulang Tahun ke-19,
           </div>
           <div
             ref={birthdayRef}
@@ -922,18 +916,6 @@ export default function MainBirthdayPage() {
             }}
           >
             Paras Rahmania ❤️
-          </div>
-          <div
-            ref={agaaRef}
-            style={{
-              fontSize: '2.2rem',
-              fontWeight: '600',
-              color: '#ffffff',
-              letterSpacing: '1px',
-              textShadow: '0 0 20px rgba(255, 255, 255, 0.6)',
-            }}
-          >
-            Moje Kochanie
           </div>
         </div>
 
@@ -996,7 +978,7 @@ export default function MainBirthdayPage() {
             marginBottom: '28px',
           }}
         >
-          WISHING YOU THE HAPPIEST 19TH BIRTHDAY 🤍
+          SEMOGA HARI INI MENJADI HARI YANG PALING MEMBAHAGIAKAN 🤍
         </div>
 
         {/* Scroll Down Bounce Arrow */}
@@ -1247,13 +1229,13 @@ export default function MainBirthdayPage() {
       {/* SECTION 4: POLAROID PHOTO GALLERY */}
       <div style={{ textAlign: 'center', marginBottom: '36px' }}>
         <p style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#38bdf8', fontWeight: '600', marginBottom: '4px' }}>
-          — SPECIAL MEMORIES —
+          — KENANGAN INDAH —
         </p>
         <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', marginBottom: '4px' }}>
-          Photo Memories
+          Momen Spesial 📸
         </h3>
         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '20px' }}>
-          Click any photo to view in detail 📸
+          Ketuk foto untuk melihat lebih jelas ✨
         </p>
 
         {/* Stacked Tilted Polaroid Cards */}
@@ -1301,7 +1283,7 @@ export default function MainBirthdayPage() {
         </div>
       </div>
 
-      {/* SECTION 5: SPECIAL PLAYLIST (3 TRACKS SELECTOR) */}
+      {/* SECTION 5: SPECIAL PLAYLIST */}
       <div
         style={{
           background: 'rgba(10, 30, 63, 0.75)',
@@ -1315,10 +1297,10 @@ export default function MainBirthdayPage() {
         }}
       >
         <p style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#38bdf8', fontWeight: '600', marginBottom: '4px' }}>
-          — SPECIAL SOUNDTRACK —
+          — MUSIK SPESIAL —
         </p>
         <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem', marginBottom: '16px' }}>
-          Our Playlist
+          Soundtrack Spesial 🎵
         </h3>
 
         {/* Spinning Vinyl Disc */}
@@ -1422,7 +1404,7 @@ export default function MainBirthdayPage() {
         {/* 3 Interactive Playlist Song List Cards */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', textAlign: 'left' }}>
           <p style={{ fontSize: '0.78rem', color: '#38bdf8', fontWeight: '600', marginBottom: '2px', textAlign: 'center' }}>
-            📜 Soundtrack Selection:
+            📜 Pilihan Lagu:
           </p>
           {playlist.map((song, index) => {
             const isSelected = index === currentTrack;
@@ -1511,13 +1493,13 @@ export default function MainBirthdayPage() {
           }}
         />
         <p style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#38bdf8', fontWeight: '600', marginBottom: '4px' }}>
-          — FROM MY HEART TO YOURS —
+          — DARI HATIKU UNTUKMU —
         </p>
         <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.35rem', marginBottom: '4px' }}>
-          Reasons Why You Are Special
+          Alasan Kenapa Kamu Begitu Spesial ✨
         </h3>
         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
-          Shake the jar to pick a note 📜
+          Goyang toplesnya untuk mengambil pesan manis 📜
         </p>
 
         <div ref={jarRef} style={{ fontSize: '3.5rem', marginBottom: '12px', cursor: 'pointer' }} onClick={handleShakeJar}>
@@ -1538,7 +1520,7 @@ export default function MainBirthdayPage() {
             boxShadow: '0 0 15px rgba(0,210,255,0.4)',
           }}
         >
-          Shake the Jar ✨
+          Goyang Toplesnya ✨
         </button>
 
         {selectedNote && (
@@ -1578,7 +1560,7 @@ export default function MainBirthdayPage() {
                 zIndex: 5,
               }}
             >
-              📜 A SPECIAL NOTE FOR PARAS RAHMANIA 💙
+              📜 PESAN SPESIAL UNTUK PARAS RAHMANIA 💙
             </div>
 
             <p style={{ marginTop: '4px', fontFamily: 'var(--font-body)' }}>
@@ -1710,10 +1692,10 @@ export default function MainBirthdayPage() {
           >
             <div style={{ fontSize: '3rem', marginBottom: '10px' }}>💖</div>
             <h3 className="neon-text" style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', marginBottom: '8px' }}>
-              Happy 19th Birthday, Paras!
+              Selamat Ulang Tahun ke-19, Paras!
             </h3>
             <p style={{ fontSize: '0.9rem', color: '#e0f2fe', marginBottom: '20px' }}>
-              Wishing the wonderful Paras Rahmania a magical year ahead 💗
+              Semoga di usia 19 tahun ini seluruh impian dan harapan indah Paras Rahmania tercapai 💗
             </p>
 
             <button
@@ -1727,7 +1709,7 @@ export default function MainBirthdayPage() {
                 cursor: 'pointer',
               }}
             >
-              Close ×
+              Tutup ×
             </button>
           </div>
         </div>
