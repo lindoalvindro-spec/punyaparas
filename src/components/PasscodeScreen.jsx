@@ -16,8 +16,8 @@ export default function PasscodeScreen({ onUnlock }) {
   const [errorMsg, setErrorMsg] = useState('');
   const [sparks, setSparks] = useState([]);
   
-  const CORRECT_PIN = '190826';
-  const PIN_LENGTH = 6;
+  const CORRECT_PIN = '0309';
+  const PIN_LENGTH = 4;
 
   const bgParticles = Array.from({ length: 14 }).map((_, i) => ({
     id: i,
@@ -114,7 +114,7 @@ export default function PasscodeScreen({ onUnlock }) {
   };
 
   const verifyPin = (enteredPin) => {
-    if (enteredPin === CORRECT_PIN || enteredPin === '190826' || enteredPin === '1908' || enteredPin === '1308' || enteredPin === '1234') {
+    if (enteredPin === CORRECT_PIN || enteredPin === '0309') {
       const tl = gsap.timeline();
       
       tl.to(dotsRef.current, {
@@ -290,7 +290,7 @@ export default function PasscodeScreen({ onUnlock }) {
               letterSpacing: '0.5px',
             }}
           >
-            For You, Lucyna
+            For You, Paras Rahmania
           </h2>
           <p
             className="neon-text-subtle"
@@ -311,11 +311,11 @@ export default function PasscodeScreen({ onUnlock }) {
               marginTop: '4px',
             }}
           >
-            Clue: 190826 ❤️
+            Clue: 0309 ❤️
           </p>
         </div>
 
-        {/* Upgraded 6-PIN Dots Container */}
+        {/* Upgraded 4-PIN Dots Container */}
         <div
           ref={dotsRef}
           style={{
@@ -329,7 +329,7 @@ export default function PasscodeScreen({ onUnlock }) {
             boxShadow: 'inset 0 0 8px rgba(0,0,0,0.5), 0 0 12px rgba(0,210,255,0.15)',
           }}
         >
-          {Array.from({ length: 6 }).map((_, idx) => {
+          {Array.from({ length: PIN_LENGTH }).map((_, idx) => {
             const isFilled = idx < pin.length;
             return (
               <div

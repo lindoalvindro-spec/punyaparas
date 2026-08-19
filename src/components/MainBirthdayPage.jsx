@@ -6,7 +6,6 @@ import {
   Heart, Music, Sparkles, X, Play, Pause, SkipForward, SkipBack, 
   Calendar, MapPin, Smile, MessageCircle, Gift, Volume2, VolumeX, Cake, ChevronDown 
 } from 'lucide-react';
-import GinghamBirthdayCard from './GinghamBirthdayCard';
 
 /* ====== LETTER TYPEWRITER SUB-COMPONENT ====== */
 function LetterTypewriter() {
@@ -17,15 +16,11 @@ function LetterTypewriter() {
   const [displayedLines, setDisplayedLines] = useState([]);
 
   const letterLines = [
-    { text: "Happy Birthday, Lucyna ❤️", style: "greeting" },
+    { text: "heiii, happy brithday yaa!! 🤍", style: "greeting" },
     { text: "", style: "spacer" },
-    { text: "On this special day, I want to wish you good health, genuine happiness, peace of mind, and the fulfilment of every dream and ambition you pursue.", style: "body" },
+    { text: "do'a terbaik for u, maapin tida bisa merayakan langsung di depan kmu. but segenap hati aku ngucapin selamat bertambah usia semoga hal baik selalu beriringan denganmu, semoga semesta senantiasa selalu berpihak padamu, semoga jalanmu untuk mencapai masa depan yang cerah di permudahkan, teruslah melangkah & berbahagia, selamat berkelana..", style: "body" },
     { text: "", style: "spacer" },
-    { text: "Thank you for being such a wonderful and meaningful part of my life. Your kindness, your laughter, and all the little moments we share mean more to me than I could ever put into words. I may not be able to give you the world right now, but I hope these heartfelt words bring a little smile to your face today.", style: "body" },
-    { text: "", style: "spacer" },
-    { text: "May our journey continue to grow with warmth, care, and inspiration, always encouraging and supporting each other to become the best versions of ourselves.", style: "body" },
-    { text: "", style: "spacer" },
-    { text: "Happy birthday, my dearest. I hope the year ahead brings you everything beautiful that you deserve.", style: "ps" },
+    { text: "and last chapter, hopefully at this age you will be someone who is still good and even better, lopyu 💕", style: "ps" },
   ];
 
   // Trigger typewriter when scrolled into view
@@ -313,8 +308,8 @@ function FarewellSection({ onOpenCake }) {
           fontWeight: '400',
         }}
       >
-        Happy Birthday, Lucyna Majewska ❤️<br /><br />
-        May your year ahead be filled with genuine happiness, good health, and success in everything you do. I’m truly grateful to be able to celebrate you today, even though we’re miles apart. Distance may keep us from celebrating side by side, but it could never make this day feel any less special to me
+        Happy Birthday, Paras Rahmania ❤️<br /><br />
+        May your 19th year ahead be filled with genuine happiness, good health, and success in everything you do. I’m truly grateful to be able to celebrate you today, even though we’re miles apart. Distance may keep us from celebrating side by side, but it could never make this day feel any less special to me
       </p>
 
       {/* Center Flower Bucket PNG Ornament */}
@@ -510,9 +505,7 @@ export default function MainBirthdayPage() {
   const vinylRef = useRef(null);
 
   const playlist = [
-    { id: 1, title: 'Me Gustas Tu', artist: 'Manu Chao', duration: '3:58', src: '/Me Gustas Tu_spotdown.org.mp3' },
-    { id: 2, title: 'On Melancholy Hill', artist: 'Gorillaz', duration: '4:21', src: '/Gorillaz - On Melancholy Hill (Official Video).mp3' },
-    { id: 3, title: 'May This Be Love', artist: 'Jimi Hendrix', duration: '3:10', src: '/May This Be Love_spotdown.org.mp3' },
+    { id: 1, title: 'Shape of My Heart', artist: 'Backstreet Boys', duration: '4:24', src: '/Shape of My Heart_spotdown.org.mp3' },
   ];
 
   // 2. Bouquet Flowers Compliment Messages State
@@ -550,24 +543,16 @@ export default function MainBirthdayPage() {
     }
   };
 
-  // 3. Polaroid Lightbox Modal State - Photos for Lucyna Majewska
+  // 3. Polaroid Lightbox Modal State - Photo for Paras Rahmania
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const photoGallery = [
     { 
       id: 1, 
-      title: 'Lucyna Majewska ✨', 
-      date: 'Special Celebration', 
+      title: 'Paras Rahmania ✨', 
+      date: 'Happy 19th Birthday 🤍', 
       location: 'Cherished Moment',
-      img: '/lucyna 1.jpeg',
-      rotation: '-2deg'
-    },
-    { 
-      id: 2, 
-      title: 'Forever in my heart 🌍', 
-      date: 'Miles Apart, But Our Hearts Close 💕', 
-      location: '',
-      img: '/lucyna 2.jpeg',
-      rotation: '2.5deg'
+      img: '/paras 1.jpeg',
+      rotation: '0deg'
     },
   ];
 
@@ -914,11 +899,11 @@ export default function MainBirthdayPage() {
           }}
         >
           <span>🤍</span>
-          <span style={{ fontFamily: 'var(--font-body)', fontWeight: '500' }}>To someone truly exceptional who holds a special place in my heart.</span>
+          <span style={{ fontFamily: 'var(--font-body)', fontWeight: '500' }}>To someone truly exceptional who turns 19 today.</span>
           <span>🤍</span>
         </div>
 
-        {/* Title: Happy Birthday, My Dearest 🤍 Lucyna Majewska */}
+        {/* Title: Happy 19th Birthday, Paras Rahmania */}
         <div
           style={{
             fontFamily: 'var(--font-display)',
@@ -931,14 +916,14 @@ export default function MainBirthdayPage() {
           <div
             ref={happyRef}
             style={{
-              fontSize: '2.8rem',
+              fontSize: '2.6rem',
               fontWeight: '600',
               color: '#ffffff',
               letterSpacing: '0.5px',
               textShadow: '0 0 20px rgba(255, 255, 255, 0.6)',
             }}
           >
-            Happy Birthday,
+            Happy 19th Birthday,
           </div>
           <div
             ref={birthdayRef}
@@ -954,19 +939,19 @@ export default function MainBirthdayPage() {
               letterSpacing: '0.5px',
             }}
           >
-            Moje Kochanie ❤️
+            Paras Rahmania ❤️
           </div>
           <div
             ref={agaaRef}
             style={{
-              fontSize: '2.8rem',
+              fontSize: '2.2rem',
               fontWeight: '600',
               color: '#ffffff',
               letterSpacing: '1px',
               textShadow: '0 0 20px rgba(255, 255, 255, 0.6)',
             }}
           >
-            Lucyna Majewska
+            Moje Kochanie
           </div>
         </div>
 
@@ -1029,7 +1014,7 @@ export default function MainBirthdayPage() {
             marginBottom: '28px',
           }}
         >
-          WISHING YOU THE HAPPIEST BIRTHDAY 🤍
+          WISHING YOU THE HAPPIEST 19TH BIRTHDAY 🤍
         </div>
 
         {/* Scroll Down Bounce Arrow */}
@@ -1037,9 +1022,6 @@ export default function MainBirthdayPage() {
           <ChevronDown size={22} color="#38bdf8" style={{ filter: 'drop-shadow(0 0 8px #00d2ff)' }} />
         </div>
       </div>
-
-      {/* SECTION 1.5: 3D GSAP INTERACTIVE GINGHAM BIRTHDAY CARD */}
-      <GinghamBirthdayCard />
 
       {/* SECTION 2: A DIGITAL BOUQUET WITH PERFECTLY SPACED FLOWERS & STEMS */}
       <div
@@ -1614,7 +1596,7 @@ export default function MainBirthdayPage() {
                 zIndex: 5,
               }}
             >
-              📜 A SPECIAL NOTE FOR LUCYNA MAJEWSKA 💙
+              📜 A SPECIAL NOTE FOR PARAS RAHMANIA 💙
             </div>
 
             <p style={{ marginTop: '4px', fontFamily: 'var(--font-body)' }}>
@@ -1746,10 +1728,10 @@ export default function MainBirthdayPage() {
           >
             <div style={{ fontSize: '3rem', marginBottom: '10px' }}>💖</div>
             <h3 className="neon-text" style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', marginBottom: '8px' }}>
-              Happy Birthday, Lucyna!
+              Happy 19th Birthday, Paras!
             </h3>
             <p style={{ fontSize: '0.9rem', color: '#e0f2fe', marginBottom: '20px' }}>
-              Wishing the wonderful Lucyna Majewska a magical year ahead 💗
+              Wishing the wonderful Paras Rahmania a magical year ahead 💗
             </p>
 
             <button

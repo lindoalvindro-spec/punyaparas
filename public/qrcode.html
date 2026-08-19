@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday QR Code Bouquet 💐</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at 50% 30%, #fdf2f8 0%, #fce7f3 40%, #ede9fe 80%, #e0e7ff 100%);
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 16px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Floating background petals */
+    .bg-petals {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .petal {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0.6;
+      animation: floatPetal 8s linear infinite;
+    }
+
+    @keyframes floatPetal {
+      0% {
+        transform: translateY(110vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      80% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Outer Bouquet Container */
+    .bouquet-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+
+    /* Top Bouquet Arrangement */
+    .bouquet-top-flowers {
+      position: relative;
+      width: 100%;
+      height: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: -50px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .flower-item {
+      position: absolute;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 8px 15px rgba(244, 114, 182, 0.35));
+    }
+
+    .flower-center {
+      font-size: 58px;
+      bottom: 0px;
+      animation: gentlePulse 3s ease-in-out infinite alternate;
+    }
+
+    .flower-left-1 {
+      font-size: 46px;
+      left: 22%;
+      bottom: 10px;
+      transform: rotate(-18deg);
+      animation: swayLeft 3.5s ease-in-out infinite alternate;
+    }
+
+    .flower-right-1 {
+      font-size: 46px;
+      right: 22%;
+      bottom: 10px;
+      transform: rotate(18deg);
+      animation: swayRight 3.5s ease-in-out infinite alternate;
+    }
+
+    .flower-left-2 {
+      font-size: 38px;
+      left: 10%;
+      bottom: 25px;
+      transform: rotate(-35deg);
+    }
+
+    .flower-right-2 {
+      font-size: 38px;
+      right: 10%;
+      bottom: 25px;
+      transform: rotate(35deg);
+    }
+
+    .sparkle-badge {
+      position: absolute;
+      top: 0;
+      font-size: 24px;
+      animation: sparkleAnim 2s infinite ease-in-out;
+    }
+
+    /* Main Cute Card */
+    .qr-card {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 36px;
+      border: 3px solid #fbcfe8;
+      box-shadow: 
+        0 20px 50px rgba(236, 72, 153, 0.18),
+        0 4px 20px rgba(0, 0, 0, 0.05),
+        inset 0 0 20px rgba(253, 242, 248, 0.8);
+      padding: 60px 24px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Card Header */
+    .card-subtitle {
+      font-family: 'Sacramento', cursive;
+      font-size: 2.2rem;
+      color: #db2777;
+      margin-bottom: -6px;
+      letter-spacing: 1px;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #831843;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    .card-desc {
+      font-size: 0.86rem;
+      color: #9d174d;
+      opacity: 0.85;
+      margin-bottom: 22px;
+      font-weight: 500;
+    }
+
+    /* QR Code Frame Decorated with Flowers */
+    .qr-frame-wrapper {
+      position: relative;
+      padding: 12px;
+      background: linear-gradient(145deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%);
+      border-radius: 28px;
+      border: 2px dashed #f472b6;
+      box-shadow: 
+        0 12px 30px rgba(244, 114, 182, 0.25),
+        inset 0 0 12px rgba(255, 255, 255, 0.8);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .qr-image-container {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-code-img {
+      width: 220px;
+      height: 220px;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* Corner Flower Badges on QR Frame */
+    .qr-corner {
+      position: absolute;
+      font-size: 24px;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+    }
+    .qr-top-left { top: -10px; left: -10px; }
+    .qr-top-right { top: -10px; right: -10px; }
+    .qr-bottom-left { bottom: -10px; left: -10px; }
+    .qr-bottom-right { bottom: -10px; right: -10px; }
+
+    /* URL Pill */
+    .url-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+      border: 1.5px solid #fbcfe8;
+      color: #be185d;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(244, 114, 182, 0.15);
+      transition: all 0.25s ease;
+    }
+
+    .url-pill:hover {
+      transform: scale(1.04);
+      background: #fdf2f8;
+      border-color: #f472b6;
+      box-shadow: 0 6px 18px rgba(244, 114, 182, 0.25);
+    }
+
+    /* Bouquet Wrapper Bottom Stem & Ribbon */
+    .bouquet-ribbon {
+      margin-top: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .ribbon-bow {
+      font-size: 42px;
+      filter: drop-shadow(0 4px 8px rgba(244, 114, 182, 0.4));
+      animation: gentlePulse 2.5s infinite alternate;
+    }
+
+    .bouquet-footer-text {
+      font-size: 0.78rem;
+      color: #9d174d;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* Action Buttons */
+    .action-group {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      z-index: 5;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 25px rgba(219, 39, 119, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(219, 39, 119, 0.45);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #be185d;
+      border: 2px solid #fbcfe8;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      background: #fdf2f8;
+      border-color: #f472b6;
+    }
+
+    /* Animations */
+    @keyframes gentlePulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    @keyframes swayLeft {
+      0% { transform: rotate(-18deg); }
+      100% { transform: rotate(-25deg); }
+    }
+
+    @keyframes swayRight {
+      0% { transform: rotate(18deg); }
+      100% { transform: rotate(25deg); }
+    }
+
+    @keyframes sparkleAnim {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2) rotate(15deg); }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .action-group, .bg-petals {
+        display: none;
+      }
+      .qr-card {
+        box-shadow: none;
+        border: 2px solid #f472b6;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Background Petals -->
+  <div class="bg-petals">
+    <div class="petal" style="left: 10%; animation-delay: 0s;">🌸</div>
+    <div class="petal" style="left: 25%; animation-delay: 2s;">🌷</div>
+    <div class="petal" style="left: 45%; animation-delay: 4s;">✨</div>
+    <div class="petal" style="left: 65%; animation-delay: 1s;">🌸</div>
+    <div class="petal" style="left: 80%; animation-delay: 3s;">💖</div>
+    <div class="petal" style="left: 90%; animation-delay: 5s;">🌺</div>
+  </div>
+
+  <!-- Bouquet Wrapper -->
+  <div class="bouquet-wrapper">
+
+    <!-- Top Flower Bouquet Crown -->
+    <div class="bouquet-top-flowers">
+      <div class="sparkle-badge" style="left: 30%;">✨</div>
+      <div class="sparkle-badge" style="right: 30%; animation-delay: 1s;">✨</div>
+
+      <div class="flower-item flower-left-2">🌿</div>
+      <div class="flower-item flower-left-1">🌷</div>
+      <div class="flower-item flower-center">💐</div>
+      <div class="flower-item flower-right-1">🌹</div>
+      <div class="flower-item flower-right-2">🌿</div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="qr-card">
+      <div class="card-subtitle">Special Birthday Gift</div>
+      <h1 class="card-title">Scan to Open Surprise 🎂</h1>
+      <p class="card-desc">Point your phone camera to open the birthday website</p>
+
+      <!-- Decorated QR Code Frame -->
+      <div class="qr-frame-wrapper">
+        <div class="qr-corner qr-top-left">🌸</div>
+        <div class="qr-corner qr-top-right">🌸</div>
+        <div class="qr-corner qr-bottom-left">🌷</div>
+        <div class="qr-corner qr-bottom-right">🌷</div>
+
+        <div class="qr-image-container">
+          <img 
+            src="https://api.qrserver.com/v1/create-qr-code/?size=450x450&data=https%3A%2F%2Frizkybirthday.vercel.app&margin=12" 
+            alt="QR Code for https://rizkybirthday.vercel.app"
+            class="qr-code-img"
+          />
+        </div>
+      </div>
+
+      <!-- URL Pill Badge -->
+      <a href="https://rizkybirthday.vercel.app" target="_blank" class="url-pill">
+        <span>🔗</span>
+        <span>rizkybirthday.vercel.app</span>
+        <span>↗</span>
+      </a>
+
+      <!-- Ribbon & Footer -->
+      <div class="bouquet-ribbon">
+        <div class="ribbon-bow">🎀</div>
+        <p class="bouquet-footer-text">Made with Love & Floral Wishes 🌸</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="action-group">
+    <button class="btn btn-primary" onclick="window.print()">
+      <span>🖨️</span>
+      <span>Print / Save as PDF</span>
+    </button>
+    <a href="https://rizkybirthday.vercel.app" target="_blank" class="btn btn-secondary">
+      <span>🌐</span>
+      <span>Open Link</span>
+    </a>
+  </div>
+
+</body>
+</html>
